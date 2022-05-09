@@ -5,14 +5,27 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SevenGuis.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="128" d:DesignWidth="128">
-    <StackPanel>
-        <ComboBox Name="FlightComboBox" SelectionChanged="FlightComboBox_SelectionChanged">
-            <ComboBoxItem Name="oneway" IsSelected="True">One-way flight</ComboBoxItem>
-            <ComboBoxItem Name="return">Return flight</ComboBoxItem>
-        </ComboBox>
-        <TextBox Name="OriginFlightTextBox" TextChanged="OriginFlightTextBox_TextChanged"/>
-        <TextBox Name="ReturnFlightTextBox" TextChanged="ReturnFlightTextBox_TextChanged"/>
-        <Button Name="BookFlightButton" Content="Book" Click="BookFlightButton_Click"/>
-    </StackPanel>
+             d:DesignHeight="256" d:DesignWidth="256">
+    <UserControl.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="4,4,0,0"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+    </UserControl.Resources>
+    <GroupBox Header="Book a flight">
+        <DockPanel
+        HorizontalAlignment="Stretch" 
+        VerticalAlignment="Stretch" 
+        Height="Auto" >
+            <ComboBox DockPanel.Dock="Top" Name="FlightComboBox" SelectionChanged="FlightComboBox_SelectionChanged">
+                <ComboBoxItem Name="oneway" IsSelected="True">One-way flight</ComboBoxItem>
+                <ComboBoxItem Name="return">Return flight</ComboBoxItem>
+            </ComboBox>
+            <Label DockPanel.Dock="Top">Origin</Label>
+            <TextBox DockPanel.Dock="Top" Name="OriginFlightTextBox" TextChanged="OriginFlightTextBox_TextChanged"/>
+            <Label DockPanel.Dock="Top">Return</Label>
+            <TextBox DockPanel.Dock="Top" Name="ReturnFlightTextBox" TextChanged="ReturnFlightTextBox_TextChanged"/>
+            <Button DockPanel.Dock="Bottom" Grid.Column="1" Grid.Row="1" Name="BookFlightButton" Content="Book" Click="BookFlightButton_Click" Width="Auto" Height="Auto" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+        </DockPanel>
+    </GroupBox>
 </UserControl>

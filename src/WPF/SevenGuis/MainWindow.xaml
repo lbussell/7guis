@@ -25,14 +25,18 @@
             <Setter Property="Margin" Value="2,2,2,0"/>
             <Setter Property="Padding" Value="4,2"/>
         </Style>
+        <Style TargetType="GroupBox">
+            <Setter Property="Padding" Value="4"/>
+            <Setter Property="Margin" Value="4"/>
+        </Style>
         <Style TargetType="controls:Counter">
-            <Setter Property="Margin" Value="2,2,2,2"/>
+            <Setter Property="Margin" Value="4"/>
         </Style>
         <Style TargetType="controls:TempConverter">
-            <Setter Property="Margin" Value="2,2,2,2"/>
+            <Setter Property="Margin" Value="4"/>
         </Style>
         <Style TargetType="controls:FlightBooker">
-            <Setter Property="Margin" Value="2,2,2,2"/>
+            <Setter Property="Margin" Value="4"/>
         </Style>
     </Window.Resources>
     
