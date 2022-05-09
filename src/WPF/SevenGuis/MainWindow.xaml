@@ -1,0 +1,90 @@
+﻿<Window x:Class="SevenGuis.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SevenGuis"
+        xmlns:controls="clr-namespace:SevenGuis.Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="320" Width="480">
+
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="2,2,2,0"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="2,2,2,0"/>
+            <Setter Property="Padding" Value="16,2"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="2,2,2,0"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="2,2,2,0"/>
+            <Setter Property="Padding" Value="4,2"/>
+        </Style>
+        <Style TargetType="controls:Counter">
+            <Setter Property="Margin" Value="2,2,2,2"/>
+        </Style>
+        <Style TargetType="controls:TempConverter">
+            <Setter Property="Margin" Value="2,2,2,2"/>
+        </Style>
+        <Style TargetType="controls:FlightBooker">
+            <Setter Property="Margin" Value="2,2,2,2"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
+        </Grid.Background>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="4" />
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4" />
+        </Grid.RowDefinitions>
+        
+        <TabControl Grid.Column="1" Grid.Row="1" >
+
+            <TabItem Header="Counter">
+                <controls:Counter />
+            </TabItem>
+            
+            <TabItem Header="Temp Converter">
+                <controls:TempConverter />
+            </TabItem>
+            
+            <TabItem Header="Flight Booker">
+                <controls:FlightBooker />
+            </TabItem>
+            
+            <TabItem Header="Timer">
+                <Label Content="Content goes here..."/>
+            </TabItem>
+            
+            <TabItem Header="CRUD">
+                <Label Content="Content goes here..."/>
+            </TabItem>
+            
+            <TabItem Header="Circle Drawer">
+                <Label Content="Content goes here..."/>
+            </TabItem>
+            
+            <TabItem Header="Cells">
+                <Label Content="Content goes here..."/>
+            </TabItem>
+            
+        </TabControl>
+        
+    </Grid>
+</Window>
